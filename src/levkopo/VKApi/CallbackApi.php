@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Levkopo\VkApi\levkopo\VKApi;
+namespace levkopo\VKApi;
 
 
 use JetBrains\PhpStorm\ArrayShape;
@@ -46,5 +46,9 @@ class CallbackApi extends VKApi {
                                  string $confirmKey = null,
                                  string $secret = null): self {
         return new self($token, false, $apiVersion, $secret, $confirmKey);
+    }
+
+    public function __destruct() {
+        echo "ok";
     }
 }

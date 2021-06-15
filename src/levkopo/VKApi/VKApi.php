@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Levkopo\VkApi\levkopo\VKApi;
+namespace levkopo\VKApi;
 
 
 use Symfony\Component\HttpClient\HttpClient;
