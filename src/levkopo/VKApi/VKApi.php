@@ -33,14 +33,15 @@ class VKApi {
     }
 
     public function getGroups(array $groupsIds, array $fields = []): array|false {
-        return $this->request("users.get", [
+        return $this->request("groups.getById", [
             "group_ids"=>implode(",", $groupsIds),
             "fields"=>implode(",", $fields),
         ]);
     }
 
-    public function getGroup(int $groupId, array $fields = []):array|false {
-        return $this->getGroups([$groupId], $fields)[0]??false;
+    public function getGroup(int $groupId = null, array $fields = []):array|false {
+        if($groupId==null&&$this->user) return false;
+        return $this->getGroups($groupId!=null?[$groupId]:[], $fields)[0]??false;
     }
 
     public function request(string $method, array $parameters = []): array|int|false {
