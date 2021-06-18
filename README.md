@@ -7,7 +7,7 @@ composer require levkopo/vk-api
 
 ### Примеры использования
 **Callback бот**
-```injectablephp
+```php
 require_once 'vendor/autoload.php';
 use levkopo\VKApi\CallbackApi;
 
