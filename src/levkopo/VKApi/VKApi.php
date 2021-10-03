@@ -93,7 +93,7 @@ class VKApi {
         $response =  $this->request("messages.send", $params + [
                 ($this->user?"peer_id":"peer_ids")=>$peerId,
                 "message"=>$message,
-                "attachments"=>implode(",", $attachments),
+                "attachment"=>implode(",", $attachments),
                 "payload"=>$payload,
                 "random_id"=>0
             ] + (empty($forwardMessages)?[]:[
