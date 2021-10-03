@@ -76,7 +76,7 @@ class VKApi {
                 "peer_id"=>$peerId,
                 ($this->user?"message_id":"conversation_message_id") => $messageId,
                 "message"=>$message,
-                "attachments"=>implode(",", $attachments),
+                "attachment"=>implode(",", $attachments),
                 "random_id"=>0,
                 "keep_forward_messages"=>$keepForwardMessages?1:0,
                 "keep_snippets"=>$keepSnippets?1:0,
